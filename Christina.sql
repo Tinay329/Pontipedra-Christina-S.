@@ -1,8 +1,6 @@
--- Create & select database
 CREATE DATABASE IF NOT EXISTS school_db;
 USE school_db;
 
--- 1. STUDENT Table
 CREATE TABLE IF NOT EXISTS STUDENT (
     StudentID VARCHAR(10) PRIMARY KEY,
     LastName VARCHAR(50) NOT NULL,
@@ -15,7 +13,6 @@ CREATE TABLE IF NOT EXISTS STUDENT (
     Password VARCHAR(255) NOT NULL -- for login
 );
 
--- 2. COURSE Table
 CREATE TABLE IF NOT EXISTS COURSE (
     CourseCode VARCHAR(10) PRIMARY KEY,
     CourseName VARCHAR(100) NOT NULL,
@@ -23,7 +20,6 @@ CREATE TABLE IF NOT EXISTS COURSE (
     Duration VARCHAR(30)
 );
 
--- 3. SUBJECT Table
 CREATE TABLE IF NOT EXISTS SUBJECT (
     SubjectCode VARCHAR(10) PRIMARY KEY,
     CourseCode VARCHAR(10) NOT NULL,
@@ -33,7 +29,6 @@ CREATE TABLE IF NOT EXISTS SUBJECT (
     FOREIGN KEY (CourseCode) REFERENCES COURSE(CourseCode) ON DELETE CASCADE
 );
 
--- 4. INSTRUCTOR Table
 CREATE TABLE IF NOT EXISTS INSTRUCTOR (
     InstructorID VARCHAR(10) PRIMARY KEY,
     LastName VARCHAR(50) NOT NULL,
@@ -43,7 +38,6 @@ CREATE TABLE IF NOT EXISTS INSTRUCTOR (
     Email VARCHAR(100)
 );
 
--- 5. ENROLLMENT Table
 CREATE TABLE IF NOT EXISTS ENROLLMENT (
     EnrollmentID INT AUTO_INCREMENT PRIMARY KEY,
     StudentID VARCHAR(10) NOT NULL,
@@ -55,7 +49,6 @@ CREATE TABLE IF NOT EXISTS ENROLLMENT (
     FOREIGN KEY (SubjectCode) REFERENCES SUBJECT(SubjectCode) ON DELETE CASCADE
 );
 
--- 6. PAYMENT Table
 CREATE TABLE IF NOT EXISTS PAYMENT (
     PaymentID INT AUTO_INCREMENT PRIMARY KEY,
     EnrollmentID INT NOT NULL,
@@ -66,7 +59,6 @@ CREATE TABLE IF NOT EXISTS PAYMENT (
     FOREIGN KEY (EnrollmentID) REFERENCES ENROLLMENT(EnrollmentID) ON DELETE CASCADE
 );
 
--- Insert sample data
 INSERT INTO STUDENT (StudentID, LastName, FirstName, MiddleName, Address, ContactNumber, Email, DateOfBirth, Password) VALUES
 ('S20', 'Santos', 'Clara', 'Reyes', 'Lemery, Batangas', '09171234567', 'clara@school.com', '2005-05-10', 'clara123'),
 ('S21', 'Galang', 'Mark', 'Cruz', 'Taal, Batangas', '09179876543', 'mark@school.com', '2004-11-22', 'mark123');
