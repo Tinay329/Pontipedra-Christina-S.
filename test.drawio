@@ -1,0 +1,178 @@
+<mxfile host="65bd71144e">
+    <diagram id="KH-sTpgPRb6YPSjIsVX7" name="Page-1">
+        <mxGraphModel dx="608" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="STUDENT" style="swimlane;shadow=0;rounded=0;glass=0;swimlaneLine=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="160" height="200" as="geometry">
+                        <mxRectangle x="40" y="40" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="StudentID (PK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="28" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="DateOfBirth" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="178" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="LastName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="58" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="FirstName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="88" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="MiddleName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="30" y="118" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="ContactNumber" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry x="25" y="148" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="INSTUCTOR" style="swimlane;shadow=0;rounded=0;glass=0;swimlaneLine=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="480" width="160" height="213" as="geometry">
+                        <mxRectangle x="40" y="40" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="InstructorID (PK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="47">
+                    <mxGeometry x="25" y="28" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="LastName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="47">
+                    <mxGeometry x="30" y="58" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="FirstName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="47">
+                    <mxGeometry x="30" y="88" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Specialization" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="47">
+                    <mxGeometry x="25" y="118" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="ContactNumber" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="47">
+                    <mxGeometry x="25" y="148" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="COURSE" style="swimlane;shadow=0;rounded=0;glass=0;swimlaneLine=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="280" width="160" height="160" as="geometry">
+                        <mxRectangle x="40" y="40" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="CourseCode (PK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="54">
+                    <mxGeometry x="20" y="28" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="CourseName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="54">
+                    <mxGeometry x="25" y="58" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Duration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="54">
+                    <mxGeometry x="35" y="88" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="PAYMENT" style="swimlane;shadow=0;rounded=0;glass=0;swimlaneLine=1;fillColor=#fad9d5;strokeColor=#ae4132;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="480" width="160" height="210" as="geometry">
+                        <mxRectangle x="40" y="40" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" value="PaymentID (PK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="61">
+                    <mxGeometry x="25" y="28" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="Status" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="61">
+                    <mxGeometry x="45" y="178" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="EnrollmentID (FK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="61">
+                    <mxGeometry x="10" y="58" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="Amount" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="61">
+                    <mxGeometry x="40" y="88" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="PaymentDate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="61">
+                    <mxGeometry x="25" y="118" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="PaymentMethod" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="61">
+                    <mxGeometry x="25" y="148" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="SUBJECT" style="swimlane;shadow=0;rounded=0;glass=0;swimlaneLine=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="280" width="160" height="160" as="geometry">
+                        <mxRectangle x="40" y="40" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="69" value="SubjectCode (PK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="68">
+                    <mxGeometry x="20" y="28" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="CourseCode (FK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="68">
+                    <mxGeometry x="10" y="58" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="SubectName" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="68">
+                    <mxGeometry x="25" y="88" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="Units" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="68">
+                    <mxGeometry x="50" y="118" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="ENROLLMENT" style="swimlane;shadow=0;rounded=0;glass=0;swimlaneLine=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="40" width="160" height="200" as="geometry">
+                        <mxRectangle x="40" y="40" width="100" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="EnroolmentID (PK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="75">
+                    <mxGeometry x="20" y="28" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="Status" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="75">
+                    <mxGeometry x="30" y="178" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="StudentID (FK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="75">
+                    <mxGeometry x="20" y="58" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="SubjectCode (FK)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="75">
+                    <mxGeometry x="20" y="88" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="EnrollmentDate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="75">
+                    <mxGeometry x="15" y="118" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Grade" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="75">
+                    <mxGeometry x="20" y="148" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="75">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="79" y="200" as="sourcePoint"/>
+                        <mxPoint x="79" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="210" y="120" as="sourcePoint"/>
+                        <mxPoint x="360" y="140" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="130"/>
+                            <mxPoint x="360" y="152"/>
+                            <mxPoint x="240" y="120"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="109" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="200" y="600" as="sourcePoint"/>
+                        <mxPoint x="360" y="600" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="590"/>
+                            <mxPoint x="270" y="650"/>
+                            <mxPoint x="280" y="620"/>
+                            <mxPoint x="360" y="612"/>
+                            <mxPoint x="240" y="580"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="110" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="200" y="359.5" as="sourcePoint"/>
+                        <mxPoint x="360" y="359.5" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="349.5"/>
+                            <mxPoint x="260" y="429.5"/>
+                            <mxPoint x="360" y="371.5"/>
+                            <mxPoint x="240" y="339.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" value="" style="fontSize=12;html=1;endArrow=ERoneToMany;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="68" target="61">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="430" y="440" as="sourcePoint"/>
+                        <mxPoint x="480" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

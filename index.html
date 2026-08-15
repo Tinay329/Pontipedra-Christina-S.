@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+</html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width,initiat-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            padding: 35px 30px;
+            width: 100%;
+            max-width: 420px;
+            border: 2px solid #ccc;
+            border-radius: 30px;
+            background-color: white;
+            box-shadow: 0 8px 24px rgba(red, green, blue, alpha);
+            border-radius: 30px;
+            animation: faidIN 0.6s ease-in-out;
+        }
+        @keyframes faidIn{
+            from{ opacity: 0; transform: translateY(-20px);} to {opacity: 1; transform: translateY(0);}
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 26px;
+        }
+        input{
+            padding: 5px 10px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+        input:focus{
+            outline: none;
+            border-color: #888;
+            box-shadow: 0 0 0 3px rgba(red, green, blue, alpha);
+        }
+        .checkbox-group{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .forgot-link{
+            text-align: right;
+            margin-bottom: 25px;
+        }
+        .forgot_link a{
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .forgot-link a:hover{
+            text-decoration: underline;
+        }
+        button{
+            padding: 12px 30px;
+            font-style: normal;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: linear-gradiant(135deg, #667eea 0%,#764ba2 100%);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button :hover{
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(red, green, blue, alpha);
+        }
+        button :active{
+            transform: translateY(0);
+        }
+        .error-text{
+            color: #e74c3c;
+            font-size: 14px;
+            margin-bottom: 12px;
+            display: none;
+            text-align: center;
+        }
+        .succes-text{
+            color: #155724;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-align: center;
+            display: none;
+            padding: 8px;
+            background-color: #d4edda;
+            border-radius: 8px;
+        }
+        .register-link{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <div class="error-text" id="errorMsg">Please fill in all fields!</div>
+        <div class="succes-text" id="successMsg"></div>
+        <div class="input-group"><input type="text" id="username" placeholder="Enter Username"></div>
+        <div class="input-group"><input type="password" id="password" placeholder="Enter Password">
+        <span class="toggle-pass" onclick="togglePassword()">Show</span></div>
+        <div class="row-group"><label><input type="checkbox" id="remember"> Remember Me</label>
+        <div class="forgot-link"><a href="#">Forgot Password?</a></div></div>
+        <button onclick="validateLogin()">Login</button>
+        <div class="register-link"> Dont have an accout? <a href="#">Register Here</a></div></div>
+        <script>
+            // Show / Hide Password
+            function togglePassword(){
+                const passInput = document.getElementById('password');
+                const toggleText = document.querySelector('.toggle-pass');
+                if (passInput.type ==="password"){
+                    passInput.type = "text";
+                    toggleText.textContent = "Hide";
+                }else{
+                    passInput.type = "password";
+                    toggleText.textContent = "Show";
+                }
+            }
+            //Login Validation
+            function validateLogin(){
+                const user= document.getElementById('username').value.trim();
+                const pass= document.getElementById('pasword').value.trim();
+                const error= document.getElementById('errorMsg');
+                const succcess= document.getElementById('successMsg');
+                //YOUR CREDENTIALS - CHANGE IF YOU WANT
+                const correctUser= "admin";
+                const correctPass= "123456";
+                //Hide message firts
+                error.style.display= "none";
+                succcess.style.display= "none";
+                if (user === "" || pass === ""){
+                    error.textContent= "Please fill in both username and password!";
+                    error.style.display= "block";
+                }
+                else{
+                    error.textContent= "Incorrect username or password!";
+                    error.style.display= "block";
+                }
+                if(user === correctUser && pass === correctPass) {
+                    succcess.textContent= "Login Successful! Welcome,"+ user + "!";
+                    succcess.style.display= "block";
+                }
+                else{
+                    error.textContent= "Incorrect Username or Password!";
+                    error.style.display= "block";
+                }
+            }
+    </script>
+</body>
+<html>
