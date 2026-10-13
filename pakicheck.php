@@ -1,38 +1,41 @@
 <?php
 session_start();
 
-// Database connection
+// Tugma sa iyong MySQL Database
 $host = "localhost";
-$dbname = "school_db";
+$dbname = "phpcrudchristina";
 $user = "root";
 $pass = "";
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli($host,$user, $pass,$dbname);
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Database Connection failed: " . $conn->connect_error);
 }
 
-// Get login inputs
-$studentID = trim($_POST['studentID']);
+// Kunin ang inputs galing sa form
+$username = trim($_POST['username']);
 $password = trim($_POST['password']);
 
-// Prepare & execute
-$stmt = $conn->prepare("SELECT StudentID, FirstName, LastName FROM STUDENT WHERE StudentID = ? AND Password = ?");
-$stmt->bind_param("ss", $studentID, $password);
-$stmt->execute();
-$result = $stmt->get_result();
+// I-query ang table na `users`
+$stmt =$conn->prepare("SELECT id, firstname, lastname, password FROM users WHERE username = ?");
+$stmt->bind_param("s", $username);$stmt->execute();
+$result =$stmt->get_result();
 
 if ($result->num_rows === 1) {
-    $row = $result->fetch_assoc();
-    $_SESSION['student_id'] = $row['StudentID'];
-    $_SESSION['full_name'] = $row['FirstName'] . ' ' . $row['LastName'];
-    header("Location: home.php");
-    exit;
-} else {
-    header("Location: index.html?error=1");
-    exit;
+    $row =$result->fetch_assoc();
+
+    // Check kung parehas ang password
+    if ($password === $row['password']) {$_SESSION['user_id'] = $row['id'];$_SESSION['full_name'] = $row['firstname'] . ' ' .$row['lastname'];
+        
+        // Pupunta sa ginawa nating dashboard
+        header("Location: dashboard.php");
+        exit();
+    }
 }
 
-$stmt->close();
-$conn->close();
+// Kung mali, ibalik sa index.php na may error flag
+header("Location: index.php?error=1");
+exit();
+
+$stmt->close();$conn->close();
 ?>
